@@ -5,7 +5,7 @@ public class Client {
     public static void main(String[] args) {
         String path = "number.txt";
 
-        Processor processor = new FileProcessor(path);
+        Processor processor = new PlusFileProcessor(path);
         int result = processor.process(path);
         System.out.println(result);
 

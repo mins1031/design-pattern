@@ -4,14 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MultiplyFileProcessor extends Processor {
+public class PlusFileProcessor extends Processor {
 
-    public MultiplyFileProcessor(String path) {
+    public PlusFileProcessor(String path) {
         super(path);
     }
 
     @Override
     public int calculate(int number, int result) {
-        return result *= number;
+        return result += number;
     }
 }

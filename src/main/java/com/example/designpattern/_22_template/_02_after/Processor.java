@@ -4,16 +4,26 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public interface Processor {
+public abstract class Processor {
 
-    default int process(String path) {
+    private String path;
+
+    public Processor(String path) {
+        this.path = path;
+    }
+
+    public int process(String path) {
         try (BufferedReader reader = new BufferedReader(new FileReader(path))){
-            int result = calculate(reader);
+            int result = 0;
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                result = calculate(result, Integer.parseInt(line));
+            }
             return result;
         } catch (IOException e) {
             throw new IllegalArgumentException(path + "에 해당하는 파일이 없습니다.", e);
         }
     }
 
-    abstract int calculate(BufferedReader reader) throws IOException;
+    protected abstract int calculate(int number, int result);
 }
