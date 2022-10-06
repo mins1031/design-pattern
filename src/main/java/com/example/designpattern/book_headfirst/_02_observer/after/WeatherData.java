@@ -1,4 +1,6 @@
-package com.example.designpattern.book_headfirst._02_observer.before;
+package com.example.designpattern.book_headfirst._02_observer.after;
+
+import com.example.designpattern.book_headfirst._02_observer.before.Updater;
 
 public class WeatherData {
 
