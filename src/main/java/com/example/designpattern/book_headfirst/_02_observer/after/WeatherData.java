@@ -26,12 +26,7 @@ public class WeatherData implements Subject {
     }
 
     public void measurementsChanged() {
-        float temperature = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
-
-        //밑의 3줄을 캡슐화 해줘야한다. -> 옵저버 패턴 적용. 근데 전략패턴을 사용해도 되지 않나?
-
+        notifyObservers();
     }
 
     @Override
@@ -55,7 +50,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observerList) {
-            observer.update(this.temperature, this.humidity, this.pressure);
+            observer.update();
         }
     }
 }
