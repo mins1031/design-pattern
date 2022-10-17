@@ -1,7 +1,7 @@
 package com.example.designpattern.book_headfirst._04_factory.after.NY;
 
-import com.example.designpattern.book_headfirst._04_factory.after.Pizza;
-import com.example.designpattern.book_headfirst._04_factory.after.PizzaStore;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.Pizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.PizzaStore;
 
 public class NYPizzaStore extends PizzaStore {
 

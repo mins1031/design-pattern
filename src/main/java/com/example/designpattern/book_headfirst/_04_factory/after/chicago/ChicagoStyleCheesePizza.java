@@ -1,6 +1,6 @@
 package com.example.designpattern.book_headfirst._04_factory.after.chicago;
 
-import com.example.designpattern.book_headfirst._04_factory.after.Pizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.Pizza;
 
 public class ChicagoStyleCheesePizza extends Pizza {
     private static final String chicagoStyleName = "시카고 스타일 딥 디쉬 치즈 피자";

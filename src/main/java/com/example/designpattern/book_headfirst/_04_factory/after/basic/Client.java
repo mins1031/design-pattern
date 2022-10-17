@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._04_factory.after;
+package com.example.designpattern.book_headfirst._04_factory.after.basic;
 
 import com.example.designpattern.book_headfirst._04_factory.after.NY.NYPizzaStore;
 import com.example.designpattern.book_headfirst._04_factory.after.chicago.ChicagoPizzaStore;

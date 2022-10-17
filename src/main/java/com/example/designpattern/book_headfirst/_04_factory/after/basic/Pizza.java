@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._04_factory.after;
+package com.example.designpattern.book_headfirst._04_factory.after.basic;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

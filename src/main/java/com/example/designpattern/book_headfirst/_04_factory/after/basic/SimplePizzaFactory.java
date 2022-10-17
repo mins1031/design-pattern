@@ -1,4 +1,9 @@
-package com.example.designpattern.book_headfirst._04_factory.after;
+package com.example.designpattern.book_headfirst._04_factory.after.basic;
+
+import com.example.designpattern.book_headfirst._04_factory.after.basic.CheesePizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.GreekPizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.PepperoniPizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.Pizza;
 
 public class SimplePizzaFactory {
 

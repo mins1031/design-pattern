@@ -1,6 +1,6 @@
 package com.example.designpattern.book_headfirst._04_factory.after.NY;
 
-import com.example.designpattern.book_headfirst._04_factory.after.Pizza;
+import com.example.designpattern.book_headfirst._04_factory.after.basic.Pizza;
 
 public class NYStyleCheesePizza extends Pizza {
     private static final String newyorkStyleName = "뉴욕 스타일 소스와 치즈 피자";
