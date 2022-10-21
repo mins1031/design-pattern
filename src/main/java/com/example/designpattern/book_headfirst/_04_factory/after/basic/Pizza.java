@@ -1,5 +1,10 @@
 package com.example.designpattern.book_headfirst._04_factory.after.basic;
 
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.cheese.Cheese;
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.clam.Clam;
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.dough.Dough;
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.pepperoni.Pepperoni;
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.sauce.Sauce;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,25 +15,23 @@ import java.util.List;
 @NoArgsConstructor
 public abstract class Pizza {
     private String name;
-    private String dough;
-    private String sauce;
+    private Dough dough;
+    private Sauce sauce;
+    private Cheese cheese;
+    private Clam clam;
+    private Pepperoni pepperoni;
     private List<String> toppings = new ArrayList<>();
 
-    public Pizza(String name, String dough, String sauce) {
+    public Pizza(String name, Dough dough, Sauce sauce, Cheese cheese, Clam clam, Pepperoni pepperoni) {
         this.name = name;
         this.dough = dough;
         this.sauce = sauce;
+        this.cheese = cheese;
+        this.clam = clam;
+        this.pepperoni = pepperoni;
     }
 
-    public void prepare() {
-        System.out.println("피자준비중 : " + name);
-        System.out.println("도우를 돌리는 중...");
-        System.out.println("소스를 뿌리는 중...");
-        System.out.println("토핑을 올리는 중...");
-        for (String topping : toppings) {
-            System.out.println(" " + topping);
-        }
-    };
+    abstract public void prepare();
 
     public void bake() {
         System.out.println("175도에서 25분간 굽기");

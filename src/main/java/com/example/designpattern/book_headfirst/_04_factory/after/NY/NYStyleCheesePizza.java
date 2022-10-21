@@ -12,4 +12,9 @@ public class NYStyleCheesePizza extends Pizza {
         super(newyorkStyleName, newyorkStyleDough, newyorkStyleSauce);
         addTopping(newyorkStyleTopping);
     }
+
+    @Override
+    public void prepare() {
+
+    }
 }
