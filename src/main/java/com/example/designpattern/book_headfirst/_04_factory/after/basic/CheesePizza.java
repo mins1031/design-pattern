@@ -1,6 +1,6 @@
 package com.example.designpattern.book_headfirst._04_factory.after.basic;
 
-import com.example.designpattern.book_headfirst._04_factory.after.ingredient.PizzaIngredientFactory;
+import com.example.designpattern.book_headfirst._04_factory.after.ingredient.factory.PizzaIngredientFactory;
 
 public class CheesePizza extends Pizza {
     private PizzaIngredientFactory pizzaIngredientFactory;

@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._04_factory.after.ingredient;
+package com.example.designpattern.book_headfirst._04_factory.after.ingredient.factory;
 
 import com.example.designpattern.book_headfirst._04_factory.after.ingredient.cheese.Cheese;
 import com.example.designpattern.book_headfirst._04_factory.after.ingredient.clam.Clam;
