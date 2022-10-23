@@ -9,8 +9,12 @@ public class ChicagoStyleCheesePizza extends Pizza {
     private static final String chicagoStyleTopping = "잘게 조각낸 모짜렐라 치즈";
 
     public ChicagoStyleCheesePizza() {
-        super(chicagoStyleName, chicagoStyleDough, chicagoStyleSauce);
         addTopping(chicagoStyleTopping);
+    }
+
+    @Override
+    public void prepare() {
+
     }
 
     @Override

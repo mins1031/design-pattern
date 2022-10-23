@@ -8,11 +8,6 @@ public class NYStyleCheesePizza extends Pizza {
     private static final String newyorkStyleSauce = "마리나라 소스";
     private static final String newyorkStyleTopping = "잘게 썬 레지아노 치즈";
 
-    public NYStyleCheesePizza() {
-        super(newyorkStyleName, newyorkStyleDough, newyorkStyleSauce);
-        addTopping(newyorkStyleTopping);
-    }
-
     @Override
     public void prepare() {
 
