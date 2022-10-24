@@ -11,7 +11,18 @@ public class RemoteControlTest {
         };
         LightOnCommand lightOnCommand = new LightOnCommand(light);
 
+        GarageDoor garageDoor = new GarageDoor() {
+            @Override
+            public void up() {
+                System.out.println("차고문 열기!@");
+            }
+        };
+        GarageDoorOpenCommand garageDoorOpenCommand = new GarageDoorOpenCommand(garageDoor);
+
         simpleRemoteController.setSlot(lightOnCommand);
+        simpleRemoteController.buttonWasPressed();
+
+        simpleRemoteController.setSlot(garageDoorOpenCommand);
         simpleRemoteController.buttonWasPressed();
     }
 }
