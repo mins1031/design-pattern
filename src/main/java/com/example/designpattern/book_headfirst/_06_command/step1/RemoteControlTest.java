@@ -8,6 +8,11 @@ public class RemoteControlTest {
             public void on() {
                 System.out.println("조명이 켜짐!@");
             }
+
+            @Override
+            public void off() {
+                System.out.println("조명이 꺼짐!@");
+            }
         };
         LightOnCommand lightOnCommand = new LightOnCommand(light);
 
