@@ -2,11 +2,12 @@ package com.example.designpattern.book_headfirst._06_command.step2;
 
 import com.example.designpattern.book_headfirst._06_command.step1.Command;
 
-public class RemoteController {
+public class RemoteControllerWithUndo {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Command undoCommand;
 
-    public RemoteController() {
+    public RemoteControllerWithUndo() {
         this.onCommands = new Command[7];
         this.offCommands = new Command[7];
 
@@ -15,6 +16,7 @@ public class RemoteController {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
+        undoCommand = new NoCommand();
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -24,10 +26,16 @@ public class RemoteController {
 
     public void onButtonWasPushed(int slot) {
         this.onCommands[slot].execute();
+        undoCommand = onCommands[slot];
     }
 
     public void offButtonWasPushed(int slot) {
         this.offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    public void undoButtonWaspushed() {
+        undoCommand.undo();
     }
 
     @Override

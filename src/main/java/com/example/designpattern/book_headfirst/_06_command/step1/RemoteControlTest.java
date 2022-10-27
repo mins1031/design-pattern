@@ -21,6 +21,11 @@ public class RemoteControlTest {
             public void up() {
                 System.out.println("차고문 열기!@");
             }
+
+            @Override
+            public void down() {
+                System.out.println("차고문 닫기!@");
+            }
         };
         GarageDoorOpenCommand garageDoorOpenCommand = new GarageDoorOpenCommand(garageDoor);
 
