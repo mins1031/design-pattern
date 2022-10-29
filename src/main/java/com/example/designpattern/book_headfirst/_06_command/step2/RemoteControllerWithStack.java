@@ -4,13 +4,13 @@ import com.example.designpattern.book_headfirst._06_command.step1.Command;
 
 import java.util.Stack;
 
-public class RemoteControllerWithUndo {
+public class RemoteControllerWithStack {
     private Command[] onCommands;
     private Command[] offCommands;
     private Command undoCommand;
     private Stack<Command> commandStack;
 
-    public RemoteControllerWithUndo() {
+    public RemoteControllerWithStack() {
         this.onCommands = new Command[7];
         this.offCommands = new Command[7];
 
@@ -31,15 +31,24 @@ public class RemoteControllerWithUndo {
     public void onButtonWasPushed(int slot) {
         this.onCommands[slot].execute();
         undoCommand = onCommands[slot];
+        commandStack.push(onCommands[slot]);
     }
 
     public void offButtonWasPushed(int slot) {
         this.offCommands[slot].execute();
         undoCommand = offCommands[slot];
+        commandStack.push(offCommands[slot]);
     }
 
     public void undoButtonWaspushed() {
         undoCommand.undo();
+        commandStack.pop();
+    }
+
+    public void executeCommandUtilNow() {
+        for (Command command : commandStack) {
+            command.execute();
+        }
     }
 
     @Override

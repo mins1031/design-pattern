@@ -2,13 +2,17 @@ package com.example.designpattern.book_headfirst._06_command.step2;
 
 import com.example.designpattern.book_headfirst._06_command.step1.Command;
 
+import java.util.Stack;
+
 public class RemoteController {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Stack<Command> commandStack;
 
     public RemoteController() {
         this.onCommands = new Command[7];
         this.offCommands = new Command[7];
+        this.commandStack = new Stack<>();
 
         Command noCommand = new NoCommand();
         for (int i = 0; i < 7; i++) {
@@ -24,6 +28,7 @@ public class RemoteController {
 
     public void onButtonWasPushed(int slot) {
         this.onCommands[slot].execute();
+
     }
 
     public void offButtonWasPushed(int slot) {
