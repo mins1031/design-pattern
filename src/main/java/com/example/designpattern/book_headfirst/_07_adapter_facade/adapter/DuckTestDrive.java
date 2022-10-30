@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._07_adapter;
+package com.example.designpattern.book_headfirst._07_adapter_facade.adapter;
 
 public class DuckTestDrive {
     public static void main(String[] args) {
