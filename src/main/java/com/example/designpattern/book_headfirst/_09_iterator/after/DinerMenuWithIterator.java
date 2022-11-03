@@ -1,14 +1,15 @@
-package com.example.designpattern.book_headfirst._09_iterator;
+package com.example.designpattern.book_headfirst._09_iterator.after;
 
+import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
 import lombok.Getter;
 
 @Getter
-public class DinerMenu {
+public class DinerMenuWithIterator {
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
     private MenuItem[] menuItems;
 
-    public DinerMenu() {
+    public DinerMenuWithIterator() {
         this.menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("채식주의자용 BLT", "통밀위에 콩고기 베이컨, 상추, 토마토를 얹은 메뉴", true, 2.99);
@@ -25,6 +26,10 @@ public class DinerMenu {
             this.menuItems[numberOfItems] = menuItem;
             this.numberOfItems++;
         }
+    }
+
+    public Iterator createIterator() {
+        return new DinerMenuIterator(this.menuItems);
     }
 
     //... 이하로 메뉴리스트 관련된 코드가 굉장히 많다.
