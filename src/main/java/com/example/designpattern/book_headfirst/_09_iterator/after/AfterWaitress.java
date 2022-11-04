@@ -1,23 +1,23 @@
 package com.example.designpattern.book_headfirst._09_iterator.after;
 
 import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
+import java.util.Iterator;
 
-import java.util.List;
 
 public class AfterWaitress {
 
-    private PancakeHouseMenuWithIterator pancakeHouseMenu;
-    private DinerMenuWithIterator dinerMenu;
+    private Menu pancakeHouseMenu;
+    private Menu dinerMenu;
 
-    public AfterWaitress(PancakeHouseMenuWithIterator pancakeHouseMenu, DinerMenuWithIterator dinerMenu) {
+    public AfterWaitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
     }
 
     public void printMenu() {
         //종업원의 메뉴 출력 기능
-        Iterator pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
-        Iterator dinerMenuIterator = dinerMenu.createIterator();
+        Iterator<MenuItem> pancakeHouseMenuIterator = pancakeHouseMenu.createIterator();
+        Iterator<MenuItem> dinerMenuIterator = dinerMenu.createIterator();
 
         System.out.println("메뉴 \n ---- 아침메뉴 ----");
         printMenu(pancakeHouseMenuIterator);
@@ -27,7 +27,7 @@ public class AfterWaitress {
 
     public void printMenu(Iterator iterator) {
         while (iterator.hasNext()) {
-            MenuItem menuItem = iterator.next();
+            MenuItem menuItem = (MenuItem) iterator.next();
             System.out.println(menuItem.getName() + ", ");
             System.out.println(menuItem.getPrice() + " -- ");
             System.out.println(menuItem.getDescription());

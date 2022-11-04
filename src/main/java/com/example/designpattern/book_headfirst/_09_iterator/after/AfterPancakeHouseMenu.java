@@ -4,13 +4,14 @@ import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Getter
-public class PancakeHouseMenuWithIterator {
+public class AfterPancakeHouseMenu {
     private List<MenuItem> menuItems;
 
-    public PancakeHouseMenuWithIterator() {
+    public AfterPancakeHouseMenu() {
         this.menuItems = new ArrayList<>();
 
         addItem("팬케이크 세트", "스크램블 + 토스트 = 팬케이크", true, 2.99);
@@ -24,8 +25,8 @@ public class PancakeHouseMenuWithIterator {
         this.menuItems.add(menuItem);
     }
 
-    public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(this.menuItems);
+    public Iterator<MenuItem> createIterator() {
+        return this.menuItems.iterator();
     }
     //... 이하로 메뉴리스트 관련된 코드가 굉장히 많다.
 }

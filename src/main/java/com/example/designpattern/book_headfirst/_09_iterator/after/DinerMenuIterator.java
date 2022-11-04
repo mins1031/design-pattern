@@ -2,6 +2,7 @@ package com.example.designpattern.book_headfirst._09_iterator.after;
 
 import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
 import lombok.Getter;
+import java.util.Iterator;
 
 @Getter
 public class DinerMenuIterator implements Iterator {
@@ -26,5 +27,10 @@ public class DinerMenuIterator implements Iterator {
         } else {
             return true;
         }
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException("메뉴 항목은 지우면 안됩니다.");
     }
 }

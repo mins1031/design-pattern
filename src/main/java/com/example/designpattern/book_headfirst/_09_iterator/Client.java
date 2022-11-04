@@ -1,18 +1,14 @@
 package com.example.designpattern.book_headfirst._09_iterator;
 
 import com.example.designpattern.book_headfirst._09_iterator.after.AfterWaitress;
-import com.example.designpattern.book_headfirst._09_iterator.after.DinerMenuWithIterator;
-import com.example.designpattern.book_headfirst._09_iterator.after.PancakeHouseMenuWithIterator;
-import com.example.designpattern.book_headfirst._09_iterator.before.DinerMenu;
-import com.example.designpattern.book_headfirst._09_iterator.before.PancakeHouseMenu;
-
-import java.util.List;
+import com.example.designpattern.book_headfirst._09_iterator.after.AfterDinerMenu;
+import com.example.designpattern.book_headfirst._09_iterator.after.AfterPancakeHouseMenu;
 
 public class Client {
 
     public static void main(String[] args) {
-        PancakeHouseMenuWithIterator pancakeHouseMenu = new PancakeHouseMenuWithIterator();
-        DinerMenuWithIterator dinerMenu = new DinerMenuWithIterator();
+        AfterPancakeHouseMenu pancakeHouseMenu = new AfterPancakeHouseMenu();
+        AfterDinerMenu dinerMenu = new AfterDinerMenu();
 
         AfterWaitress afterWaitress = new AfterWaitress(pancakeHouseMenu, dinerMenu);
 

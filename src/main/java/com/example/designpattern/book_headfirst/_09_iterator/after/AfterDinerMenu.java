@@ -3,13 +3,15 @@ package com.example.designpattern.book_headfirst._09_iterator.after;
 import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
 import lombok.Getter;
 
+import java.util.Iterator;
+
 @Getter
-public class DinerMenuWithIterator {
+public class AfterDinerMenu implements Menu {
     private static final int MAX_ITEMS = 6;
     private int numberOfItems = 0;
     private MenuItem[] menuItems;
 
-    public DinerMenuWithIterator() {
+    public AfterDinerMenu() {
         this.menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("채식주의자용 BLT", "통밀위에 콩고기 베이컨, 상추, 토마토를 얹은 메뉴", true, 2.99);
@@ -28,6 +30,7 @@ public class DinerMenuWithIterator {
         }
     }
 
+    @Override
     public Iterator createIterator() {
         return new DinerMenuIterator(this.menuItems);
     }
