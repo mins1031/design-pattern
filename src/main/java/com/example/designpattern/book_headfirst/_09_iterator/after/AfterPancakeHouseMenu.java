@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Getter
-public class AfterPancakeHouseMenu {
+public class AfterPancakeHouseMenu implements Menu {
     private List<MenuItem> menuItems;
 
     public AfterPancakeHouseMenu() {
