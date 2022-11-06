@@ -1,6 +1,6 @@
-package com.example.designpattern.book_headfirst._09_iterator.after;
+package com.example.designpattern.book_headfirst._09_iterator_composite.iterator.after;
 
-import com.example.designpattern.book_headfirst._09_iterator.MenuItem;
+import com.example.designpattern.book_headfirst._09_iterator_composite.iterator.MenuItem;
 import java.util.Iterator;
 import java.util.List;
 

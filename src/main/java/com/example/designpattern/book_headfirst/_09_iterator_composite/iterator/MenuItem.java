@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._09_iterator;
+package com.example.designpattern.book_headfirst._09_iterator_composite.iterator;
 
 import lombok.Getter;
 
