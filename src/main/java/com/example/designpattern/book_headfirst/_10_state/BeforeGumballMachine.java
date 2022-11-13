@@ -1,6 +1,6 @@
 package com.example.designpattern.book_headfirst._10_state;
 
-public class GumballMachine {
+public class BeforeGumballMachine {
     private static final int SOLD_OUT = 0;
     private static final int NO_QUARTER = 1;
     private static final int HAS_QUARTER = 2;
@@ -9,7 +9,7 @@ public class GumballMachine {
     private int state = SOLD_OUT;
     private int count = 0;
 
-    public GumballMachine(int count) {
+    public BeforeGumballMachine(int count) {
         this.count = count;
         if (count > 0) {
             state = NO_QUARTER;

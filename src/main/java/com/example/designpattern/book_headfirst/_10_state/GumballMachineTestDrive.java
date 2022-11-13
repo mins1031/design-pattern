@@ -2,36 +2,36 @@ package com.example.designpattern.book_headfirst._10_state;
 
 public class GumballMachineTestDrive {
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(5);
-        System.out.println(gumballMachine);
+        BeforeGumballMachine beforeGumballMachine = new BeforeGumballMachine(5);
+        System.out.println(beforeGumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
 
-        System.out.println(gumballMachine);
+        System.out.println(beforeGumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.ejectQuarter();
-        gumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.ejectQuarter();
+        beforeGumballMachine.turnCrank();
 
-        System.out.println(gumballMachine);
+        System.out.println(beforeGumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.ejectQuarter();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
+        beforeGumballMachine.ejectQuarter();
 
-        System.out.println(gumballMachine);
+        System.out.println(beforeGumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
+        beforeGumballMachine.insertQuarter();
+        beforeGumballMachine.turnCrank();
 
-        System.out.println(gumballMachine);
+        System.out.println(beforeGumballMachine);
     }
 }
