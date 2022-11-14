@@ -1,4 +1,4 @@
-package com.example.designpattern.book_headfirst._10_state;
+package com.example.designpattern.book_headfirst._11_proxy;
 
 import com.example.designpattern.book_headfirst._10_state.state.HasQuarterState;
 import com.example.designpattern.book_headfirst._10_state.state.NoQuarterState;
@@ -9,7 +9,7 @@ import com.example.designpattern.book_headfirst._10_state.state.WinnerState;
 import lombok.Getter;
 
 @Getter
-public class AfterGumballMachine {
+public class ProxyGumballMachine {
     private State soldOutState;
     private State noQuarterState;
     private State hasQuarterState;
@@ -19,7 +19,7 @@ public class AfterGumballMachine {
     private State state;
     private int count = 0;
 
-    public AfterGumballMachine(int count) {
+    public ProxyGumballMachine(int count) {
         this.soldOutState = new SoldOutState(this);
         this.noQuarterState = new NoQuarterState(this);
         this.hasQuarterState = new HasQuarterState(this);
