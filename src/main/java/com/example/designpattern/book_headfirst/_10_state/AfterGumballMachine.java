@@ -23,7 +23,7 @@ public class AfterGumballMachine {
         this.soldOutState = new SoldOutState(this);
         this.noQuarterState = new NoQuarterState(this);
         this.hasQuarterState = new HasQuarterState(this);
-        this.soldOutState = new SoldState(this);
+        this.soldState = new SoldState(this);
         this.winnerState = new WinnerState(this);
 
         this.count = count;
