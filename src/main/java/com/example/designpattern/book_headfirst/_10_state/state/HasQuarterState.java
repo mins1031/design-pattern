@@ -1,7 +1,9 @@
 package com.example.designpattern.book_headfirst._10_state.state;
 
 import com.example.designpattern.book_headfirst._10_state.AfterGumballMachine;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class HasQuarterState implements State {
     private AfterGumballMachine gumballMachine;
 

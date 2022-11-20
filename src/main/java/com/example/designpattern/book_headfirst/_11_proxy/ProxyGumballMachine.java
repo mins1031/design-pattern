@@ -20,11 +20,11 @@ public class ProxyGumballMachine {
     private int count = 0;
 
     public ProxyGumballMachine(int count) {
-        this.soldOutState = new SoldOutState(this);
-        this.noQuarterState = new NoQuarterState(this);
-        this.hasQuarterState = new HasQuarterState(this);
-        this.soldState = new SoldState(this);
-        this.winnerState = new WinnerState(this);
+        this.soldOutState = new SoldOutState();
+        this.noQuarterState = new NoQuarterState();
+        this.hasQuarterState = new HasQuarterState();
+        this.soldState = new SoldState();
+        this.winnerState = new WinnerState();
 
         this.count = count;
         if (count > 0) {
